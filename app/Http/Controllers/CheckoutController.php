@@ -109,15 +109,15 @@ class CheckoutController extends Controller
         );
 
         $data_pay = json_encode(array(
-            "clientId" => "018a6aa0-5582-37c7-acf0-7f146e56b02a",
-            "publicKey" => "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJ7nT3JonCglFen1ijulth7EVSmjY5ITmaDWAHO6rQn2m0kwJKc9dzd6eNU5Q+ydajuB2989qSLEa/bJ9VhU2cQeTayw08Omm4J1ICK2pfAtGFpxq03Y2bWC5ePNC9qkXzfsV9ljtt536CRJbBk6yvKnt39bkT/ckSpxNOOCmbZQIDAQAB",
+            "clientId" => "1654a62e-f3c3-3208-912e-22c1445bd57e",
+            "publicKey" => "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCFkJTaXTCURxR59OHa9jH53xJqK6qWQA4g3YMxXyzTJa29jhmKUS2/4GN/Z5VbBETPZIGrJWcll0sSEo3oVbVCQ9JZtEqDKBNf6Km7y7GPXlyPX0Ng11gShQtbqtqjW6SVOJl/fMhZhay56pcy13h3PHNtn4oOrLE1A4bFwgYemwIDAQAB",
             "items" => json_encode(array($items_data)),
             "customerName" => $name,
             "totalAmount" => "$total",
             "currency" => "$currency",
             "merchantOrderId" => "$orderId",
-            "merchantKey" => "sictiej.PxfYGSq5aEtx2uWJyHPucx5pqig",
-            "projectName" => "conceptxcustomized",
+            "merchantKey" => "bn19vus.bfDN_Ueb34FhRq2-HoP90G46hNI",
+            "projectName" => "Conceptxlaravel",
             "merchantName" => "Soe Htet"
         ));
 
@@ -133,7 +133,7 @@ class CheckoutController extends Controller
 
         $urlencode_value = urlencode($value);
 
-        $encryptedHashValue = hash_hmac('sha256', $data_pay, '7d64d33961e017b5d13840006b2274f3');
+        $encryptedHashValue = hash_hmac('sha256', $data_pay, 'f62c786ab31bf42cf562fa358c89ca69');
         $redirect_url = "https://form.dinger.asia?hashValue=$encryptedHashValue&payload=$urlencode_value";
 
         return redirect($redirect_url);
@@ -177,15 +177,15 @@ class CheckoutController extends Controller
         );
 
         $data_pay = json_encode(array(
-            "clientId" => "018a6aa0-5582-37c7-acf0-7f146e56b02a",
-            "publicKey" => "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJ7nT3JonCglFen1ijulth7EVSmjY5ITmaDWAHO6rQn2m0kwJKc9dzd6eNU5Q+ydajuB2989qSLEa/bJ9VhU2cQeTayw08Omm4J1ICK2pfAtGFpxq03Y2bWC5ePNC9qkXzfsV9ljtt536CRJbBk6yvKnt39bkT/ckSpxNOOCmbZQIDAQAB",
+            "clientId" => "1654a62e-f3c3-3208-912e-22c1445bd57e",
+            "publicKey" => "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCFkJTaXTCURxR59OHa9jH53xJqK6qWQA4g3YMxXyzTJa29jhmKUS2/4GN/Z5VbBETPZIGrJWcll0sSEo3oVbVCQ9JZtEqDKBNf6Km7y7GPXlyPX0Ng11gShQtbqtqjW6SVOJl/fMhZhay56pcy13h3PHNtn4oOrLE1A4bFwgYemwIDAQAB",
             "items" => json_encode(array($items_data)),
             "customerName" => $name,
             "totalAmount" => "$total",
             "currency" => "$currency",
             "merchantOrderId" => "$orderId",
-            "merchantKey" => "sictiej.PxfYGSq5aEtx2uWJyHPucx5pqig",
-            "projectName" => "conceptxcustomized",
+            "merchantKey" => "bn19vus.bfDN_Ueb34FhRq2-HoP90G46hNI",
+            "projectName" => "Conceptxlaravel",
             "merchantName" => "Soe Htet"
         ));
 
@@ -201,7 +201,7 @@ class CheckoutController extends Controller
 
         $urlencode_value = urlencode($value);
 
-        $encryptedHashValue = hash_hmac('sha256', $data_pay, '7d64d33961e017b5d13840006b2274f3');
+        $encryptedHashValue = hash_hmac('sha256', $data_pay, 'f62c786ab31bf42cf562fa358c89ca69');
         $redirect_url = "https://form.dinger.asia?hashValue=$encryptedHashValue&payload=$urlencode_value";
 
         return redirect($redirect_url);
